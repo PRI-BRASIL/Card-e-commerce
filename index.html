@@ -23,12 +23,27 @@
             Nike Air Max 270 Masculino Confortável 
     </div>
     <div class="detail">
-        <p>Preço : <span>R$50</span></p>
+        <p>Preço : <span>R$50,00</span></p>
         <a href="https://www.linkedin.com/in/priscila-brasil-2aa1b590">Carrinho</a>
     </div>
 
    </div>
  
- </div>   
+ </div>
+ 
+ <script src="https://code.jquery.com/jquery-3.6.4.min.js" 
+ integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" 
+ crossorigin="anonymous"></script> 
+
+ <script>
+    $(".color span").click(function(){
+        $("color span").removeClass("active");
+        $(this).addClass("active");
+        $(".detail span").css("color",$(this).attr("data-color"));
+        $("detail a").css("background",$(this).attr("data-color"));
+        $(".product-image").attr("src",$(this).attr("data-image"));
+        $("body").css("background",$(this).attr("data-color"));
+    });
+ </script>
 </body>
 </html>
